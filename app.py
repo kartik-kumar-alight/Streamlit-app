@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 
 model= joblib.load("titaniv_v0.sav")
