@@ -8,9 +8,9 @@ model= joblib.load("titaniv_v0.sav")
 def main():
     """ main() contains all UI structure elements; getting and storing user data can be done within it"""
     st.title("Titanic Survival Prediction")                                                                             
-    st.write("""## Would you have survived From Titanic Disaster?""")                                                   
+    st.title("--- Would you have survived From Titanic Disaster? --- ")                                                   
 
-    st.title("-----          Check Your Survival Chances          -----")
+    st.title("-----        Check Your Survival Chances        -----")
 
     ## Framing UI Structure
     age = st.slider("Enter Age :", 1, 75, 30)                                                                  
@@ -52,5 +52,4 @@ if st.button("Predict"):
         st.write("**Survival Probability Chances :** 'NO': {}%  'YES': {}% ".format(round((proba[0,0])*100,2),round((proba[0,1])*100,2)))
     else:
         st.write("***Better Luck Next time !!!!...*** **you're probably Die!'**")
-        st.image(r"Rip.jfif")
         st.write("**Survival Probability Chances :** 'NO': {}%  'YES': {}% ".format(round((proba[0,0])*100,2),round((proba[0,1])*100,2)))
