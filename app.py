@@ -25,8 +25,9 @@ def main():
     else:
         Sex=1
 
-    Pclass= st.selectbox("Select Passenger-Class:",[1,2,3])                        
-
+    Pclass= st.selectbox("Select Passenger-Class:",[1,2,3])   
+    
+    boarded_location = st.selectbox("Boarded Location:", ["Southampton","Cherbourg","Queenstown"])
     Embarked_C,Embarked_Q,Embarked_S=0,0,0                 
     if boarded_location == "Queenstown":
         Embarked_Q=1
