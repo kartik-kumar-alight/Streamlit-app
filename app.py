@@ -15,7 +15,7 @@ def main():
     ## Framing UI Structure
     age = st.slider("Enter Age :", 1, 75, 30)                                                                  
 
-    fare = st.slider("Fare (in 1912 $) :", 15, 500, 40)                                                        
+    fare = st.slider("Fare :", 15, 500, 40)                                                        
 
     Parch = st.selectbox("How many Parents or children are travelling with you?", [0, 1, 2, 3, 4, 5, 6, 7, 8]) 
 
@@ -36,7 +36,7 @@ def main():
     else:
         Embarked_C=1
 
-    data={"Age":age,"Fare":fare,"Parch":Parch,"Sex":Sex,"Pclass":Pclass,"Embarked_Q":Embarked_Q,"Embarked_S":Embarked_S,"Embarked_C":Embarked_C}
+    data={"Pclass":Pclass,"Sex":Sex,"Age":age,"Parch":Parch,"Fare":fare,"Embarked_C":Embarked_C,"Embarked_Q":Embarked_Q,"Embarked_S":Embarked_S}
 
     df=pd.DataFrame(data,index=[0])     
     return df
